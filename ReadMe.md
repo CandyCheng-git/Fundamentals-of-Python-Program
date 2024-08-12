@@ -681,6 +681,7 @@ travel_cost(20)
 ```
 
 ## Built-in Functions
+### Simple Example:
 ```python
 print()
 ```
