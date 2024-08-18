@@ -8,6 +8,7 @@
 3. [Week 3](#week-3)
 4. [Week 4](#week-4)
 5. [Week 5](#week-5)
+6. [Week 7](#week-7)
 
 ### Week 1
 
@@ -685,3 +686,167 @@ travel_cost(20)
 ```python
 print()
 ```
+
+### Week 7
+
+## Manipulation of Strings
+```python
+single = 'String with Single quotation marks'
+#          ^
+#           \
+print(single[1])
+# prints t
+```
+```python
+single = 'String with Single quotation marks'
+#           ^  ^
+#           \  /
+print(single[2:6])
+# prints ring
+```
+
+## Concatenating Strings
+```python
+single = 'String with Single quotation marks'
+double = "String with Double quotation marks"
+
+comb = single + double + 'extraString'
+# 'String with Single quotation marksString with Double quotation marksextraString'
+```
+
+## Counting Strings
+```python
+comb = 'String with Single quotation marksString with Double quotation marksextraString'
+print(len(comb))
+#print 79
+```
+
+## Strings are Immutable
+- The String can’t be changed once it’s created
+- Using the Python built-in `id()` function, it returns the unique id for the specified object.
+```python
+string = 'Test'
+print(id(string))
+# prints 2084536090672
+string = 'Test change'
+print(id(string))
+# prints 2084479927856
+```
+
+## Escape Characters
+- backslash `\` was used to combine multiple lines in the String
+- escape character – double quotes `""` – needs to be included within the String – This is achieved by using `\"`
+```python
+tesla_quote = "\"I do not care that they stole my idea... "
+              "I care that they do not have any of their own.\""
+#print "I do not care that they stole my idea... I care that they do not have any of their own."
+```
+
+
+## Iterating Strings
+```python
+def print_letter(word):
+   for letter in word:
+      print(letter)
+
+name = 'Tesla'
+print_letter(name)
+""" prints
+T
+e
+s
+l
+a
+"""
+```
+
+## Strings and Conditionals
+```python
+def print_a_occurrence(word, count = 0):
+   for letter in word:
+      if 'a' in letter:
+         count += 1
+
+   print(count)
+
+name = 'Tesla'
+print_a_occurrence(name) # prints 1
+```
+
+
+## Strings Formatting Methods
+1. `.lower()` - returns the String with all lowercase characters
+2. `.upper()` - returns the String with all uppercase characters
+3. `.title()` - first character of each word is capitalised
+```python
+name = 'ivAna'
+
+name_lower = name.lower()
+print(name_lower)
+# name_lower = 'ivana'
+
+name_upper = name.upper()
+print(name_upper)
+# name_upper = 'IVANA'
+
+name_title = name.title()
+print(name_title)
+# name_title = 'Ivana'
+```
+
+
+## Splitting Strings
+```python
+string = 'See what happens when split is used'
+print(string.split())
+# prints ['See', 'what', 'happens', 'when', 'split', 'is', 'used']
+```
+```python
+string = 'See,what,happens,when,split,is,used'
+print(string.split(','))
+# prints ['See', 'what', 'happens', 'when', 'split', 'is', 'used']
+```
+
+
+## Joining Strings
+```python
+list = ['See', 'what', 'happens', 'when', 'split', 'is', 'used']
+print(','.join(list))
+# prints See,what,happens,when,split,is,used
+```
+
+
+## Strip Strings
+```python
+dirty = '\n,   Lee,,,'
+print(dirty.strip('\n, '))
+# prints Lee
+```
+
+
+## Replace Strings
+```python
+csv = 'abc,def,ghi'
+whitespace = csv.replace(',', ' ')
+# whitespace = 'abc def ghi'
+```
+```python
+txt = "I like bananas"
+x = txt.replace("bananas", "apples")
+# x = 'I like apples'
+```
+
+
+## Find Strings
+- If found, it will return the index value
+- If not found, it will return -1
+```python
+csv = 'abc,def,ghi'
+print(csv.find('g')) # prints 8
+print(csv.find('ga')) # prints -1
+```
+
+
+
+
+
