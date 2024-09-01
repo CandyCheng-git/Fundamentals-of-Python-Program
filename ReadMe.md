@@ -11,6 +11,14 @@
 6. [Week 7](#week-7)
 
 ### Week 1
+#### Introduction to Programming
+- **Comments**: Using `#` to add comments in code.
+- **Strings**: Understanding strings and their manipulation.
+- **Variables**: Assigning values to variables and changing them.
+- **Data Types**: Introduction to integers and floats.
+- **Arithmetic Operations**: Basic operations like addition, subtraction, multiplication, division, modulus, and exponentiation.
+- **Print Function**: Using `print()` to display output.
+
 
 ## Comments
 ```python
@@ -164,6 +172,13 @@ print(result)
 ```
 
 ### Week 2
+#### Control Flow
+- **Control Flow**: Understanding how the order of execution is determined in a program.
+- **Conditional Statements**: Using `if`, `elif`, and `else` to control the flow based on conditions.
+- **Boolean Expressions**: Evaluating conditions that return True or False.
+- **Logical Operators**: Using `and`, `or`, and `not` to combine conditions.
+- **Flowcharts and Pseudocode**: Representing algorithms visually and in plain language.
+
 
 ## Boolean - False
 ```python
@@ -221,6 +236,13 @@ else:
 ```
 
 ### Week 3
+#### Loops
+- **Loops**: Understanding the concept of iteration.
+- **For Loops**: [Using for loops for definite iteration.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
+- **While Loops**: Using `while` loops for indefinite iteration.
+- **Loop Control**: Using `break`, `continue`, and `else` statements in loops.
+- **Nested Loops**: Understanding loops within loops.
+
 
 ## Loops
 1. **Indefinite**: where the number of times a loop is executed depends on the number of times a condition is met.
@@ -342,6 +364,13 @@ new_list = [i for i in range(11) if i > 5]
 ```
 
 ### Week 4
+#### Lists
+- **Lists**: [Creating and using lists to store collections of items.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
+- **List Methods**: Using methods like `.append()`, `.remove()`, and `.pop()`.
+- **Accessing List Elements**: Understanding indexing and slicing.
+- **Two-Dimensional Lists**: Working with lists of lists (nested lists).
+- **Length of a List**: Using `len()` to find the number of elements in a list.
+
 
 ## Summary of Python collections
 1. **List**: “is a collection which is ordered and changeable (Mutable). Allows duplicate members.”
@@ -571,6 +600,13 @@ print(gradebook_dict['Jing'])  # prints {'address': 'Fake Rd', 'student_id': 123
 ```
 
 ### Week 5
+#### Functions
+- **Functions**: [Defining and calling functions to create reusable code.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
+- **Parameters and Arguments**: Understanding how to pass data to functions.
+- **Return Values**: Using `return` to send data back from functions.
+- **Types of Arguments**: Positional, keyword, and default arguments.
+- **Built-in vs. User-Defined Functions**: Understanding the difference and best practices.
+
 
 ## User Defined Functions
 ```python
@@ -688,6 +724,12 @@ print()
 ```
 
 ### Week 7
+#### Strings
+- **String Manipulation**: Slicing and concatenating strings.
+- **Immutability of Strings**: Understanding that strings cannot be changed after creation.
+- **Escape Characters**: Using escape characters for special characters in strings.
+- **Iterating Strings**: Looping through characters in a string.
+- **String Methods**: Using methods like `.lower()`, `.upper()`, `.replace()`, `.find()`, and `.split()`.
 
 ## Manipulation of Strings
 ```python
