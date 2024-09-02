@@ -19,8 +19,13 @@
 - **Arithmetic Operations**: Basic operations like addition, subtraction, multiplication, division, modulus, and exponentiation.
 - **Print Function**: Using `print()` to display output.
 
+#### Python functions mentioned in the workshops
+1. `print()`
+2. `type()`
 
-## Comments
+
+#### More concepts in Week 1
+##### Comments
 ```python
 # character enables a comment  
 # Comment on a single line
@@ -29,7 +34,7 @@ name = "Alice"  # variable name has the value of Alice
 ```
 
 
-## print() Function
+##### print() Function
 The `print()` function prints a message to the console or output.
 ```python
 # Prints blank line  
@@ -40,11 +45,11 @@ print("Cheatsheet")
 ```
 
 
-## Syntax
+##### Syntax
 Covers Strings, Boolean, Lists, and so on.
 
 
-## Strings
+##### Strings
 Strings contain characters enclosed by single quotes `' '` or double quotes `" "`.
 ```python
 # Single quotes
@@ -55,7 +60,7 @@ double = "Double"
 ```
 
 
-## String Concatenation
+##### String Concatenation
 The plus sign `+` can add two `str` types or Strings (and not just numeric types).
 ```python
 single = 'Single'
@@ -64,7 +69,7 @@ double = "Double"
 concatenate = single + double  # becomes "SingleDouble"
 ```
 
-## Integer (and Float)
+##### Integer (and Float)
 - **Integer** must be a whole number, it can be 0, positive, or negative, but must be without decimals.
 - **Float** is a number, it can be positive or negative, but must contain one or more decimals.
 ```python
@@ -80,7 +85,7 @@ f = 1.33
 print(type(f))  # For example
 ```
 
-## Variables
+##### Variables
 Variables assign a value or store data using an equals sign `=`.
 ```python
 # Valid variable names and assignment 
@@ -93,7 +98,7 @@ bool_statement = False
 int_var = 12  
 ```
 
-## Arithmetic Operations
+##### Arithmetic Operations
 - `+` for addition
 - `-` for subtraction
 - `*` for multiplication
@@ -110,7 +115,7 @@ modulus = 13 % 2  # 1
 exponentiation = 2 ** 3  # 8  
 ```
 
-## Modulo Operator (%)
+##### Modulo Operator (%)
 Modulo operation, with a percent sign `%`, returns the remainder of the division operation.
 1. `6 % 2` results in 0 because 6 divided by 2 would return 3, leaving no remainder.
 2. `7 % 2` results in 1 because 7 divided by 2 is not evenly divisible, leaving 1 remainder.
@@ -127,7 +132,7 @@ one = 7 % 2  # 1
 nine = 9 % 50000  # 9
 ```
 
-## Plus Equals
+##### Plus Equals
 A shortcut to update a variable value can be done by using the plus equals sign `+=`.
 ```python
 # Plus Equals (int)  
@@ -139,7 +144,7 @@ data = "Plus "
 data += " Equals"  # equivalent to data = data + " Equals" 
 ```
 
-## Errors
+##### Errors
 PyCharm will (a) display the error type; and (b) information where the error has occurred.
 ```python
 # If unsure, use type() function 
@@ -147,21 +152,21 @@ PyCharm will (a) display the error type; and (b) information where the error has
 SyntaxError: invalid syntax  
 ```
 
-## NameError
+##### NameError
 NameError is produced when variable(s) were not defined.
 ```python
 # NameError  
 print(result)
 ```
 
-## SyntaxError
+##### SyntaxError
 SyntaxError is produced when Python syntax is not followed.
 ```python
 # SyntaxError  
 result = 'Wrong quotes"
 ```
 
-## ZeroDivisionError
+##### ZeroDivisionError
 ZeroDivisionError occurs when a number (denominator) is divided by a 0 or 0.0.
 ```python
 # ZeroDivisionError  
@@ -179,50 +184,55 @@ print(result)
 - **Logical Operators**: Using `and`, `or`, and `not` to combine conditions.
 - **Flowcharts and Pseudocode**: Representing algorithms visually and in plain language.
 
+#### Python functions mentioned in the workshops
+1. `input()`
+2. `bool()`
 
-## Boolean - False
+#### More concepts in Week 2
+
+##### Boolean - False
 ```python
 # Empty, False, 0 None
 ```
 
-## Boolean – True
+##### Boolean – True
 ```python
 # Any number (beside 0), True, String (that is not empty)
 ```
 
-## Equals and Not Equals
+##### Equals and Not Equals
 ```python
 test = ""
 print(bool(test))  # False
 '13' == 13  # False
 ```
 
-## If Statement
+##### If Statement
 ```python
 day = 'Monday'  # Enter day here
 if day == 'Monday':
     print('attend the Workshop')
 ```
 
-## Ask for User Input
+##### Ask for User Input
 ```python
 print('Enter your age: ')
 age = input()  # stores String
 age = int(age)  # converts to int
 ```
 
-## Logical Operators
+##### Logical Operators
 1. `and`
 2. `or`
 3. `not`
 
-### Example
+###### Example
 ```python
 print(not True)  # prints False
 print(not False)  # prints True
 ```
 
-## Else Statement
+##### Else Statement
 ```python
 credits = 35  # Modify credits value here
 if credits >= 1000:
@@ -243,12 +253,16 @@ else:
 - **Loop Control**: Using `break`, `continue`, and `else` statements in loops.
 - **Nested Loops**: Understanding loops within loops.
 
+#### Python functions mentioned in the workshops
+1. `range()`
 
-## Loops
+#### More concepts in Week 3
+
+##### Loops
 1. **Indefinite**: where the number of times a loop is executed depends on the number of times a condition is met.
 2. **Definite**: where the number of times a loop will be executed is declared in advance.
 
-### Example
+###### Example
 ```python
 grades = [35, 50, 65, 85]
 print(grades[0])  # 35
@@ -257,27 +271,27 @@ print(grades[2])  # 65
 print(grades[3])  # 85
 ```
 
-## For Loops
+##### For Loops
 A type of definite iteration that will know how many times to iterate the loop because our grades list contains a collection of elements or items with a predefined length.
 ```python
 for g in grades:
     print(g)
 ```
 
-## One Line For Loops
+##### One Line For Loops
 ```python
 grades = [35, 50, 65, 85]
 for g in grades: print(g)
 ```
 
-## Using Range in For Loops
+##### Using Range in For Loops
 ```python
 for temp in range(11):
     # Iterates 11 times, from 0 to 10
     print('I must attend my workshops')
 ```
 
-### Example
+###### Example
 ```python
 for temp in range(11):
     print('Iteration number is: ' + str(temp))
@@ -295,7 +309,7 @@ for temp in range(11):
 # Iteration number is: 10
 ```
 
-## While Loops
+##### While Loops
 ```python
 iteration = 0
 while iteration < 11:
@@ -309,7 +323,7 @@ while iteration < len(grades):
     iteration = iteration + 1
 ```
 
-## Loop Control - Break
+##### Loop Control - Break
 ```python
 grades = [35, 50, 65, 85]
 for grade in grades:
@@ -319,7 +333,7 @@ for grade in grades:
 # prints 35 because the break is after the print function
 ```
 
-## Loop Control - Continue
+##### Loop Control - Continue
 ```python
 grades = [35, 50, 65, 85]
 for grade in grades:
@@ -329,7 +343,7 @@ for grade in grades:
 # prints 50, 65, 85
 ```
 
-## Loop Control - Else
+##### Loop Control - Else
 ```python
 grades = [35, 50, 65, 85]
 for grade in grades:
@@ -338,7 +352,7 @@ else:
     print('Completed the grades for loop.')
 ```
 
-## Nested Loops
+##### Nested Loops
 ```python
 gradebook = [
     ['Jing', 35], 
@@ -352,12 +366,12 @@ for student in gradebook:
         print(detail)
 ```
 
-## List Comprehension
+##### List Comprehension
 ```python
 new_list = [name for name in students if 'i' in name]
 ```
 
-### Example
+###### Example
 ```python
 new_list = [i for i in range(11)]
 new_list = [i for i in range(11) if i > 5]
@@ -371,14 +385,24 @@ new_list = [i for i in range(11) if i > 5]
 - **Two-Dimensional Lists**: Working with lists of lists (nested lists).
 - **Length of a List**: Using `len()` to find the number of elements in a list.
 
+#### Python functions mentioned in the workshops
+1. `len()`
+2. `append()`
+3. `extend()`
+4. `remove()`
+5. `pop()`
+6. `del`
+7. `zip()`
 
-## Summary of Python collections
+#### More concepts in Week 4
+
+##### Summary of Python collections
 1. **List**: “is a collection which is ordered and changeable (Mutable). Allows duplicate members.”
 2. **Tuple**: “is a collection which is ordered and unchangeable. Allows duplicate members.”
 3. **Set**: “is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.”
 4. **Dictionary**: “is a collection which is ordered** and changeable (Mutable). No duplicate members.”
 
-## List
+##### List
 - List is created using square brackets `[]`.
 - Each item is separated by a comma `,`.
 - Good Python practice: insert a space after each comma.
@@ -391,7 +415,7 @@ list_empty = []
 list_empty = list(())
 ```
 
-## List Methods / Class
+##### List Methods / Class
 ```python
 # list_name is our list
 # .method() is a method of our list
@@ -404,7 +428,7 @@ AttributeError: 'list' object has no attribute 'method'
 list.method(parameter)
 ```
 
-## Reference - Check Methods Documentation
+##### Reference - Check Methods Documentation
 Use the following official websites:
 1. [Official Python Docs](https://docs.python.org/3/tutorial/datastructures.html)
 2. [W3Schools Docs](https://www.w3schools.com/python/python_ref_list.asp)
@@ -412,7 +436,7 @@ Use the following official websites:
 
 
 
-## List Method: .append()
+##### List Method: .append()
 ```python
 # adds an element to the end of a list
 grades = [35, 50, 65, 85]
@@ -420,7 +444,7 @@ grades.append(67)
 print(grades)  # Prints [35, 50, 65, 85, 67]
 ```
 
-## Adding Multiple Items to a List
+##### Adding Multiple Items to a List
 ```python
 grades = [35, 50, 65, 85, 67]
 grades += [76, 78, 52]  # OR grades = grades + [76, 78, 52]
@@ -428,7 +452,7 @@ grades.extend([68, 72])  # square brackets are used here and above
 print(grades)  # prints [35, 50, 65, 85, 67, 76, 78, 52, 68, 72]
 ```
 
-## Accessing List Elements
+##### Accessing List Elements
 - The first element in a list has an index of 0.
 - Negative index can be used to access last element(s) of a list.
 ```python
@@ -437,7 +461,7 @@ print(students[1])  # prints Jim
 print(students[-1])  # prints Rakesh
 ```
 
-### Element Index and Negative Index Example:
+##### Element Index and Negative Index Example:
 | Element | Index | Negative Index |
 |---------|-------|----------------|
 | 'Jing'  | 0     | -4             |
@@ -445,7 +469,7 @@ print(students[-1])  # prints Rakesh
 | 'Kerrie'| 2     | -2             |
 | 'Rakesh'| 3     | -1             |
 
-## Length of a List
+##### Length of a List
 The `len()` function returns the number of items in an object.
 ```python
 students = ['Jing', 'Jim', 'Kerrie', 'Rakesh']
@@ -455,12 +479,12 @@ guess = 'Howmansafayhschatersarehere can you guess? :-)'
 print(len(guess))  # prints 46
 ```
 
-## Remove List Elements
+##### Remove List Elements
 1. `grades.remove(value)`
 2. `grades.pop(specific_index)`
 3. `del grades[specific_index]`
 
-### Example:
+###### Example:
 ```python
 grades = [35, 50, 65, 85]
 grades.remove(35)
@@ -475,7 +499,7 @@ del grades[0]
 print(grades)  # prints [50, 65, 85]
 ```
 
-## Two Dimensional (2D) Lists
+##### Two Dimensional (2D) Lists
 Known as a nested list – this logic can be applied to create a three-dimensional (3D) list.
 ```python
 gradebook = [['Jing', 35], ['Jim', 50], ['Kerrie', 65], ['Rakesh', 85]]
@@ -491,7 +515,7 @@ gradebook[-4][1] = 35
 gradebook[-4][-1] = 35
 ```
 
-## Zip
+##### Zip
 - Joins lists together. Extremely powerful!
 - If zip parameters (or iterators) lengths are different, then the iterator with the least element determines the length of the new iterator.
 ```python
@@ -505,12 +529,12 @@ gradebook_zip = list(zip(students, grades))
 # "Candy" will be disappeared
 ```
 
-## Tuples
+##### Tuples
 - Do the same operation as Lists.
 - Tuples are unchangeable.
 - However, instead of declaring using square brackets `[]` like Lists, it uses round brackets `()`.
 
-### Example:
+###### Example:
 ```python
 # .count(): returns the number of times the specified element appears in the list
 # .insert(): inserts the specified value at the specified position
@@ -518,18 +542,18 @@ gradebook_zip = list(zip(students, grades))
 # .sorted(): returns a sorted list of the specified iterable object
 ```
 
-## Built-in Function
+##### Built-in Function
 ```python
 # Syntax for a built-in function
 builtinfuncion(parameter)
 ```
 
-## Range
+##### Range
 ```python
 numbers = [0, 1, 2, 3, 4, 5]
 ```
 
-### Example:
+###### Example:
 ```python
 # 0 to 5
 range(6)
@@ -538,10 +562,10 @@ range(6)
 range(1000)
 ```
 
-## Reference - Range
+##### Reference - Range
 Check [W3Schools](https://www.w3schools.com/python/ref_func_range.asp) for more information.
 
-### Example:
+###### Example:
 ```python
 # Even sequence of numbers ranging from -255 to 255
 ans = list(range(-254, 256, 2))
@@ -556,7 +580,7 @@ print(list(range(0, 10, 3)))
 # [0, 3, 6, 9]
 ```
 
-## Slicing Lists
+##### Slicing Lists
 ```python
 nums[start:end]
 nums = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -569,7 +593,7 @@ nums[-6:]  # For i = len(nums)-6 ; i < len(nums)
 # [3, 4, 5, 6, 7, 8]
 ```
 
-## Sets
+##### Sets
 Using curly brackets `{}`:
 1. Set items are unchangeable.
     - The exception: add and remove items allowed.
@@ -580,7 +604,7 @@ grades_set = {35, 50, 65, 85, 85, 85}
 print(grades_set)
 ```
 
-## Dictionary
+##### Dictionary
 Using curly brackets `{}`, but store data values in key:value pairs.
 ```python
 gradebook_dict = {
@@ -607,14 +631,23 @@ print(gradebook_dict['Jing'])  # prints {'address': 'Fake Rd', 'student_id': 123
 - **Types of Arguments**: Positional, keyword, and default arguments.
 - **Built-in vs. User-Defined Functions**: Understanding the difference and best practices.
 
+#### Python functions mentioned in the workshops
+1. `def` (for defining functions)
+2. `print()`
+3. `return`
+4. `input()`
+5. `str()`
+6. `int()`
 
-## User Defined Functions
+#### More concepts in Week 5
+
+##### User Defined Functions
 ```python
 def function_name(first_parameter):
     pass
 ```
 
-## Functions - Arguments
+##### Functions - Arguments
 ```python
 def print_hello(name):
     print('Welcome ' + name + ' to print_hello function')
@@ -623,7 +656,7 @@ print_hello('Mark')  # OR print_hello(name = 'Mark')
 # prints Welcome Mark to print_hello function
 ```
 
-## Functions - Multiple Parameters and Multiple Arguments
+##### Functions - Multiple Parameters and Multiple Arguments
 ```python
 def print_hello(name, surname):
     print('Welcome ' + name + ' ' + surname + ' to print_hello function')
@@ -634,7 +667,7 @@ print_hello('Mark', 'Smith')
 # OR print_hello(surname = 'Smith', name = 'Mark')
 ```
 
-## Functions - Returns and Multiple Returns
+##### Functions - Returns and Multiple Returns
 ```python
 def find_max(numbers):
     max_value = numbers[0]  # Initialise the max value to the first number in the list
@@ -648,7 +681,7 @@ max_num = find_max(numbers)
 print(max_num)  # Output: 10
 ```
 
-## Currency Exchange Function Example
+##### Currency Exchange Function Example
 ```python
 def exchange_usd_to_aud(usd_amount, exchange_rate):
     return usd_amount * exchange_rate
@@ -658,7 +691,7 @@ print('100 US dollars would give: ' + str(aud_amount) + ' AUD dollars')
 # prints 100 US dollars would give: 143.3 AUD dollars
 ```
 
-## Weather Report Function Example
+##### Weather Report Function Example
 ```python
 weather_data = [37, 23, 30]
 
@@ -675,12 +708,12 @@ monday, tuesday, wednesday = weather_report(weather_data)
 # wednesday = 'Two days after: 30'
 ```
 
-## Types of Arguments
+##### Types of Arguments
 1. **Positional arguments**: arguments that are called by their position in the function definition.
 2. **Keyword arguments**: arguments that are called by their name.
 3. **Default arguments**: arguments that are given default values.
 
-### Example:
+###### Example:
 ```python
 def travel_cost(destination_km, price_per_km):
     return destination_km * price_per_km
@@ -698,7 +731,7 @@ def travel_cost(destination_km, price_per_km = 5):
 print(travel_cost(15))
 ```
 
-## More Complex Example:
+###### More Complex Example:
 ```python
 savings = 1000
 
@@ -717,8 +750,8 @@ travel_cost(20)
 # Total cost: 100
 ```
 
-## Built-in Functions
-### Simple Example:
+##### Built-in Functions
+###### Simple Example:
 ```python
 print()
 ```
@@ -731,7 +764,25 @@ print()
 - **Iterating Strings**: Looping through characters in a string.
 - **String Methods**: Using methods like `.lower()`, `.upper()`, `.replace()`, `.find()`, and `.split()`.
 
-## Manipulation of Strings
+#### Python functions mentioned in the workshops
+1. `len()`
+2. `id()`
+3. `str()`
+4. `replace()`
+5. `find()`
+6. `join()`
+7. `split()`
+8. `strip()`
+9. `int()`
+10. `bool()`
+11. `title()`
+12. `upper()`
+13. `lower()`
+14. `print()`
+
+#### More concepts in Week 7
+
+##### Manipulation of Strings
 ```python
 single = 'String with Single quotation marks'
 #          ^
@@ -747,7 +798,7 @@ print(single[2:6])
 # prints ring
 ```
 
-## Concatenating Strings
+##### Concatenating Strings
 ```python
 single = 'String with Single quotation marks'
 double = "String with Double quotation marks"
@@ -756,14 +807,14 @@ comb = single + double + 'extraString'
 # 'String with Single quotation marksString with Double quotation marksextraString'
 ```
 
-## Counting Strings
+##### Counting Strings
 ```python
 comb = 'String with Single quotation marksString with Double quotation marksextraString'
 print(len(comb))
 #print 79
 ```
 
-## Strings are Immutable
+##### Strings are Immutable
 - The String can’t be changed once it’s created
 - Using the Python built-in `id()` function, it returns the unique id for the specified object.
 ```python
@@ -775,7 +826,7 @@ print(id(string))
 # prints 2084479927856
 ```
 
-## Escape Characters
+##### Escape Characters
 - backslash `\` was used to combine multiple lines in the String
 - escape character – double quotes `""` – needs to be included within the String – This is achieved by using `\"`
 ```python
@@ -785,7 +836,7 @@ tesla_quote = "\"I do not care that they stole my idea... "
 ```
 
 
-## Iterating Strings
+##### Iterating Strings
 ```python
 def print_letter(word):
    for letter in word:
@@ -802,7 +853,7 @@ a
 """
 ```
 
-## Strings and Conditionals
+##### Strings and Conditionals
 ```python
 def print_a_occurrence(word, count = 0):
    for letter in word:
@@ -816,7 +867,7 @@ print_a_occurrence(name) # prints 1
 ```
 
 
-## Strings Formatting Methods
+##### Strings Formatting Methods
 1. `.lower()` - returns the String with all lowercase characters
 2. `.upper()` - returns the String with all uppercase characters
 3. `.title()` - first character of each word is capitalised
@@ -837,7 +888,7 @@ print(name_title)
 ```
 
 
-## Splitting Strings
+##### Splitting Strings
 ```python
 string = 'See what happens when split is used'
 print(string.split())
@@ -850,7 +901,7 @@ print(string.split(','))
 ```
 
 
-## Joining Strings
+##### Joining Strings
 ```python
 list = ['See', 'what', 'happens', 'when', 'split', 'is', 'used']
 print(','.join(list))
@@ -858,7 +909,7 @@ print(','.join(list))
 ```
 
 
-## Strip Strings
+##### Strip Strings
 ```python
 dirty = '\n,   Lee,,,'
 print(dirty.strip('\n, '))
@@ -866,7 +917,7 @@ print(dirty.strip('\n, '))
 ```
 
 
-## Replace Strings
+##### Replace Strings
 ```python
 csv = 'abc,def,ghi'
 whitespace = csv.replace(',', ' ')
@@ -879,7 +930,7 @@ x = txt.replace("bananas", "apples")
 ```
 
 
-## Find Strings
+##### Find Strings
 - If found, it will return the index value
 - If not found, it will return -1
 ```python
