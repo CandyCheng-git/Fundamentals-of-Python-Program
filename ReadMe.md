@@ -13,15 +13,19 @@
 ### Week 1
 #### Introduction to Programming
 - **Comments**: Using `#` to add comments in code.
+- **Print Function**: Using `print()` to display output.
 - **Strings**: Understanding strings and their manipulation.
+- **String Concatenation**: Joining multiple strings together using `+`.
+- **Integers and Floats**: Introduction to numeric data types: whole numbers (integers) and decimal numbers (floats).
 - **Variables**: Assigning values to variables and changing them.
 - **Data Types**: Introduction to integers and floats.
 - **Arithmetic Operations**: Basic operations like addition, subtraction, multiplication, division, modulus, and exponentiation.
-- **Print Function**: Using `print()` to display output.
+
 
 #### Python functions mentioned in the workshops
-1. `print()`
-2. `type()`
+1. `print()`: Outputs messages to the console.
+2. `type()`: Returns the type of a variable.
+3. `len()`: Returns the number of items in a collection (e.g., lists, strings).
 
 
 #### More concepts in Week 1
@@ -178,15 +182,22 @@ print(result)
 
 ### Week 2
 #### Control Flow
+- **Introduction to Control Flow**: Managing the order in which code executes.
+- **Flowcharts and Pseudocode**: Representing algorithms visually and in plain language.
+- **Control Flow before Code**: Pseudocode and flowcharts to design control logic before coding.
 - **Control Flow**: Understanding how the order of execution is determined in a program.
-- **Conditional Statements**: Using `if`, `elif`, and `else` to control the flow based on conditions.
+- **Conditional Statements**: Using `if`, `elif`, and `else` to execute code based on conditions.
 - **Boolean Expressions**: Evaluating conditions that return True or False.
 - **Logical Operators**: Using `and`, `or`, and `not` to combine conditions.
-- **Flowcharts and Pseudocode**: Representing algorithms visually and in plain language.
+- **Relational Operators**: Using `==`, `!=`, `>`, `<`, `>=`, and `<=` to compare values.
+- **If Statement**: Executing code based on a true condition.
+- **Logical Operators**: Combining conditions with `and`, `or`, and `not`.
+- **Else Statement**: Providing alternative code execution when `if` conditions are not met.
+- **Else If Statement**: Handling multiple conditions with `elif`.
 
 #### Python functions mentioned in the workshops
-1. `input()`
-2. `bool()`
+1. `input()`: Accepts user input from the console.
+2. `int()`: Converts a string input to an integer.
 
 #### More concepts in Week 2
 
@@ -247,14 +258,15 @@ else:
 
 ### Week 3
 #### Loops
+- **Introduction to Loops**: Repeating code multiple times.
 - **Loops**: Understanding the concept of iteration.
-- **For Loops**: [Using for loops for definite iteration.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
-- **While Loops**: Using `while` loops for indefinite iteration.
-- **Loop Control**: Using `break`, `continue`, and `else` statements in loops.
+- **For Loops**: [Using `for` loops for definite iteration over a sequence like lists or ranges.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
+- **While Loops**: Using `while` loops for indefinite iteration until a condition is met.
+- **Loop Control**: Using `break`, `continue`, and `else` statements to control loop execution.
 - **Nested Loops**: Understanding loops within loops.
 
 #### Python functions mentioned in the workshops
-1. `range()`
+1. `range()`: Generates a sequence of numbers, often used in `for` loops.
 
 #### More concepts in Week 3
 
@@ -379,20 +391,106 @@ new_list = [i for i in range(11) if i > 5]
 
 ### Week 4
 #### Lists
-- **Lists**: [Creating and using lists to store collections of items.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
+- **Introduction to Lists**: Creating and working with lists, a collection of elements.
+- **Accessing List Elements**: Using indexing to access elements in a list.
+- **Modifying List Elements**: Changing elements in a list through indexing or list methods.
+ **Lists**: [Creating and using lists to store collections of items.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
 - **List Methods**: Using methods like `.append()`, `.remove()`, and `.pop()`.
 - **Accessing List Elements**: Understanding indexing and slicing.
-- **Two-Dimensional Lists**: Working with lists of lists (nested lists).
+- **Two Dimensional (2D) Lists**: Creating and manipulating lists of lists.
+- **`zip()` Function**: Combining multiple lists into tuples using the `zip()` function.
+- **Other Useful List Methods**: Exploring methods like `append()`, `insert()`, `remove()`, `pop()`, and `sort()`.
 - **Length of a List**: Using `len()` to find the number of elements in a list.
 
 #### Python functions mentioned in the workshops
-1. `len()`
-2. `append()`
-3. `extend()`
-4. `remove()`
-5. `pop()`
-6. `del`
-7. `zip()`
+1. `list()`: Converts other data types (like range) into a list.
+2. `len()`: Returns the number of elements in a list.
+3. `count()`: Returns the number of times a specified element appears in a list.
+4. `len()`
+5. `append()`
+6. `extend()`
+7. `remove()`
+8. `pop()`
+9. `del`
+10. `zip()`
+
+#### [Python List Methods](https://www.geeksforgeeks.org/list-methods-python/)
+1. `append()`: Used for adding elements to the end of the List.
+2. `copy()`: Returns a shallow copy of a list.
+3. `clear()`: Removes all items from the list.
+4. `count()`: Counts the elements in the list.
+5. `extend()`: Adds each element of an iterable to the end of the List.
+6. `index()`: Returns the lowest index where the element appears.
+7. `insert()`: Inserts a given element at a given index in a list.
+8. `pop()`: Removes and returns the last value from the List or the given index value.
+9. `remove()`: Removes a given object from the List.
+10. `reverse()`: Reverses objects of the List in place.
+11. `sort()`: Sorts a List in ascending, descending, or user-defined order.
+12. `min()`: Calculates the minimum of all the elements of the List.
+13. `max()`: Calculates the maximum of all the elements of the List.
+
+#### [Python List/Array Methods](https://www.w3schools.com/python/python_ref_list.asp)
+1. `append()`: Adds an element at the end of the list.
+2. `clear()`: Removes all the elements from the list.
+3. `copy()`: Returns a copy of the list.
+4. `count()`: Returns the number of elements with the specified value.
+5. `extend()`: Adds the elements of a list (or any iterable) to the end of the current list.
+6. `index()`: Returns the index of the first element with the specified value.
+7. `insert()`: Adds an element at the specified position.
+8. `pop()`: Removes the element at the specified position.
+9. `remove()`: Removes the first item with the specified value.
+10. `reverse()`: Reverses the order of the list.
+11. `sort()`: Sorts the list.
+
+#### [Python Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
+
+##### Common List Methods:
+1. `append(x)`: Add an item to the end of the list.
+2. `extend(iterable)`: Extend the list by appending all the items from the iterable.
+3. `insert(i, x)`: Insert an item at a given position.
+4. `remove(x)`: Remove the first item from the list whose value is equal to x.
+5. `pop([i])`: Remove the item at the given position in the list and return it.
+6. `clear()`: Remove all items from the list.
+7. `index(x[, start[, end]])`: Return zero-based index in the list of the first item whose value is equal to x.
+8. `count(x)`: Return the number of times x appears in the list.
+9. `sort(key=None, reverse=False)`: Sort the items of the list in place.
+10. `reverse()`: Reverse the elements of the list in place.
+11. `copy()`: Return a shallow copy of the list.
+
+##### Additional Functions Mentioned:
+12. `len(s)`: Return the length (the number of items) of an object.
+13. `del s[i]`: Delete the item at a specific position.
+14. `del s[i:j]`: Delete a slice from the list.
+15. `max(iterable, *[, key, default])`: Return the largest item in an iterable.
+16. `min(iterable, *[, key, default])`: Return the smallest item in an iterable.
+17. `sum(iterable, /, start=0)`: Sums up the items of an iterable from left to right and returns the total.
+18. `sorted(iterable, *, key=None, reverse=False)`: Return a new sorted list from the items in iterable.
+19. `reversed(seq)`: Return a reverse iterator over the values of the given sequence.
+20. `enumerate(iterable, start=0)`: Return an enumerate object.
+21. `filter(function, iterable)`: Construct an iterator from elements of iterable for which function returns true.
+22. `map(function, iterable, ...)`: Return an iterator that applies function to every item of iterable, yielding the results.
+23. `zip(*iterables)`: Make an iterator that aggregates elements from each of the iterables.
+
+##### Set Methods:
+24. `add(x)`: Add an element to a set.
+25. `remove(x)`: Remove an element from a set; it must be a member.
+26. `discard(x)`: Remove an element from a set if it is a member.
+27. `pop()`: Remove and return an arbitrary set element.
+28. `clear()`: Remove all elements from this set.
+
+##### Dictionary Methods:
+29. `dict()`: Create a new dictionary.
+30. `dict.clear()`: Remove all items from the dictionary.
+31. `dict.copy()`: Return a shallow copy of the dictionary.
+32. `dict.fromkeys(iterable[, value])`: Create a new dictionary with keys from iterable and values set to value.
+33. `dict.get(key[, default])`: Return the value for key if key is in the dictionary, else default.
+34. `dict.items()`: Return a new view of the dictionary’s items (key, value).
+35. `dict.keys()`: Return a new view of the dictionary’s keys.
+36. `dict.pop(key[, default])`: If the key is in the dictionary, remove it and return its value, else return default.
+37. `dict.popitem()`: Remove and return a (key, value) pair as a 2-tuple.
+38. `dict.setdefault(key[, default])`: Return the value of the key if it is in the dictionary; if not, insert key with a value of default and return default.
+39. `dict.update([other])`: Update the dictionary with the key/value pairs from other, overwriting existing keys.
+40. `dict.values()`: Return a new view of the dictionary’s values.
 
 #### More concepts in Week 4
 
@@ -625,19 +723,94 @@ print(gradebook_dict['Jing'])  # prints {'address': 'Fake Rd', 'student_id': 123
 
 ### Week 5
 #### Functions
+- **Introduction to Functions**: Understanding the purpose of functions for code reusability.
+- **Defining a User Function**: Using `def` to create a function.
+- **Calling a Function**: Running a function by its name with parentheses.
 - **Functions**: [Defining and calling functions to create reusable code.](https://atlas.org/api/v1/files?documentId=7e053b4f-7a58-41df-9d61-fc3553aaabad)
 - **Parameters and Arguments**: Understanding how to pass data to functions.
 - **Return Values**: Using `return` to send data back from functions.
-- **Types of Arguments**: Positional, keyword, and default arguments.
-- **Built-in vs. User-Defined Functions**: Understanding the difference and best practices.
+- **Multiple Returns**: Returning multiple values from a function.
+- **Types of Arguments**: Using positional, keyword, and default arguments in function definitions.
+- **Built-in Functions vs. User-Defined Functions**: Differentiating between Python’s built-in functions and custom functions.
+
 
 #### Python functions mentioned in the workshops
-1. `def` (for defining functions)
+1. `def`: Used to define a function.
 2. `print()`
-3. `return`
+3. `return`: Used to return values from a function.
 4. `input()`
 5. `str()`
 6. `int()`
+
+#### Python functions mentioned in the link are available in the workshop
+[Python Built in Functions](https://www.w3schools.com/python/python_ref_functions.asp)
+1. `abs()`: Returns the absolute value of a number
+2. `all()`: Returns True if all items in an iterable object are true
+3. `any()`: Returns True if any item in an iterable object is true
+4. `ascii()`: Returns a readable version of an object. Replaces non-ASCII characters with escape character
+5. `bin()`: Returns the binary version of a number
+6. `bool()`: Returns the boolean value of the specified object
+7. `bytearray()`: Returns an array of bytes
+8. `bytes()`: Returns a bytes object
+9. `callable()`: Returns True if the specified object is callable, otherwise False
+10. `chr()`: Returns a character from the specified Unicode code
+11. `classmethod()`: Converts a method into a class method
+12. `compile()`: Returns the specified source as an object, ready to be executed
+13. `complex()`: Returns a complex number
+14. `delattr()`: Deletes the specified attribute (property or method) from the specified object
+15. `dict()`: Returns a dictionary (Array)
+16. `dir()`: Returns a list of the specified object's properties and methods
+17. `divmod()`: Returns the quotient and the remainder when argument1 is divided by argument2
+18. `enumerate()`: Takes a collection (e.g., a tuple) and returns it as an enumerate object
+19. `eval()`: Evaluates and executes an expression
+20. `exec()`: Executes the specified code (or object)
+21. `filter()`: Use a filter function to exclude items in an iterable object
+22. `float()`: Returns a floating-point number
+23. `format()`: Formats a specified value
+24. `frozenset()`: Returns a frozenset object
+25. `getattr()`: Returns the value of the specified attribute (property or method)
+26. `globals()`: Returns the current global symbol table as a dictionary
+27. `hasattr()`: Returns True if the specified object has the specified attribute (property/method)
+28. `hash()`: Returns the hash value of a specified object
+29. `help()`: Executes the built-in help system
+30. `hex()`: Converts a number into a hexadecimal value
+31. `id()`: Returns the id of an object
+32. `input()`: Allowing user input
+33. `int()`: Returns an integer number
+34. `isinstance()`: Returns True if a specified object is an instance of a specified object
+35. `issubclass()`: Returns True if a specified class is a subclass of a specified object
+36. `iter()`: Returns an iterator object
+37. `len()`: Returns the length of an object
+38. `list()`: Returns a list
+39. `locals()`: Returns an updated dictionary of the current local symbol table
+40. `map()`: Returns the specified iterator with the specified function applied to each item
+41. `max()`: Returns the largest item in an iterable
+42. `memoryview()`: Returns a memory view object
+43. `min()`: Returns the smallest item in an iterable
+44. `next()`: Returns the next item in an iterable
+45. `object()`: Returns a new object
+46. `oct()`: Converts a number into an octal
+47. `open()`: Opens a file and returns a file object
+48. `ord()`: Convert an integer representing the Unicode of the specified character
+49. `pow()`: Returns the value of x to the power of y
+50. `print()`: Prints to the standard output device
+51. `property()`: Gets, sets, or deletes a property
+52. `range()`: Returns a sequence of numbers, starting from 0 and incrementing by 1 (by default)
+53. `repr()`: Returns a readable version of an object
+54. `reversed()`: Returns a reversed iterator
+55. `round()`: Rounds a number
+56. `set()`: Returns a new set object
+57. `setattr()`: Sets an attribute (property/method) of an object
+58. `slice()`: Returns a slice object
+59. `sorted()`: Returns a sorted list
+60. `staticmethod()`: Converts a method into a static method
+61. `str()`: Returns a string object
+62. `sum()`: Sums the items of an iterator
+63. `super()`: Returns an object that represents the parent class
+64. `tuple()`: Returns a tuple
+65. `type()`: Returns the type of an object
+66. `vars()`: Returns the `__dict__` property of an object
+67. `zip()`: Returns an iterator from two or more iterators
 
 #### More concepts in Week 5
 
@@ -767,18 +940,32 @@ print()
 #### Python functions mentioned in the workshops
 1. `len()`
 2. `id()`
-3. `str()`
-4. `replace()`
-5. `find()`
-6. `join()`
-7. `split()`
-8. `strip()`
+3. `str()`: Converts other data types to a string.
+4. `replace()`: Replaces occurrences of a substring.
+5. `find()`: Searches for a substring and returns its index.
+6. `join()`: Joins elements of a list into a single string with a specified delimiter.
+7. `split()`: Splits a string into a list based on a specified delimiter.
+8. `strip()`: Removes whitespace from the beginning and end of a string.
 9. `int()`
 10. `bool()`
-11. `title()`
-12. `upper()`
-13. `lower()`
+11. `title()`: Capitalizes the first letter of each word in a string.
+12. `upper()`: Converts a string to uppercase.
+13. `lower()`: Converts a string to lowercase.
 14. `print()`
+
+#### [Python Escape Characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp)
+
+| Code  | Result           |
+|-------|------------------|
+| \\\'  | Single Quote      |
+| \\\\  | Backslash         |
+| \\n   | New Line          |
+| \\r   | Carriage Return   |
+| \\t   | Tab               |
+| \\b   | Backspace         |
+| \\f   | Form Feed         |
+| \\ooo | Octal value       |
+| \\xhh | Hex value         |
 
 #### More concepts in Week 7
 
@@ -939,6 +1126,13 @@ print(csv.find('g')) # prints 8
 print(csv.find('ga')) # prints -1
 ```
 
+###### [Python String find() Method](https://www.w3schools.com/python/ref_string_find.asp)
+```python
+txt = "Hello, welcome to my world."
+
+print(txt.find("q"))   # Output: -1
+print(txt.index("q"))  # Raises ValueError: substring not found
+```
 
 
 
