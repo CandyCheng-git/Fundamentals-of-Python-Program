@@ -1154,10 +1154,12 @@ print(txt.index("q"))  # Raises ValueError: substring not found
 - **Decimal Arithmetic**: The `decimal` module provides more precise arithmetic than floating-point numbers, reducing rounding errors in calculations.
 - 
 #### Python functions mentioned in the workshops
-1. `from `name_module `import` name_object
-2. `datetime`
-3. `random`
-4. `pyplot`
+1. `from `my_name_of_module `import` my_name_of_object
+2. `import datetime`
+3. `import random`
+4. `import pyplot`
+5. `import *`
+6. `import Decimal`
 
 #### [Python Modules](https://docs.python.org/3/tutorial/modules.html)
 
@@ -1193,4 +1195,16 @@ y = random.sample(range(1000), 10)
 plt.plot(x, y)
 plt.show()
 ```
-![result](./Week8/1.png) { width: 100px; }
+[<img src="./Week8/1.png" width="300"/>](Result)
+
+
+##### Decimal module
+```python
+from decimal import Decimal
+
+cost_one = Decimal('0.10')
+cost_two = Decimal('0.20')
+total_cost = cost_one + cost_two
+# prints 0.30
+print(total_cost)
+```
