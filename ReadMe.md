@@ -1191,5 +1191,5 @@ x = range(1, 11)
 y = random.sample(range(1000), 10)
 plt.plot(x, y)
 plt.show()
-![result](./Week8/1.png)
 ```
+![result](./Week8/1.png)
