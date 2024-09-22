@@ -406,13 +406,12 @@ new_list = [i for i in range(11) if i > 5]
 1. `list()`: Converts other data types (like range) into a list.
 2. `len()`: Returns the number of elements in a list.
 3. `count()`: Returns the number of times a specified element appears in a list.
-4. `len()`
-5. `append()`
-6. `extend()`
-7. `remove()`
-8. `pop()`
-9. `del`
-10. `zip()`
+4. `append()`
+5. `extend()`
+6. `remove()`
+7. `pop()`
+8. `del`
+9. `zip()`
 
 #### [Python List Methods](https://www.geeksforgeeks.org/list-methods-python/)
 1. `append()`: Used for adding elements to the end of the List.
@@ -952,6 +951,9 @@ print()
 12. `upper()`: Converts a string to uppercase.
 13. `lower()`: Converts a string to lowercase.
 14. `print()`
+15. `.format()`
+16. `isalpha()`
+17. `print(f)`
 
 #### [Python Escape Characters](https://www.w3schools.com/python/gloss_python_escape_characters.asp)
 
@@ -1135,5 +1137,59 @@ print(txt.index("q"))  # Raises ValueError: substring not found
 ```
 
 
+### Week 8
+#### Modules
+- **Module Importing**: The syntax for importing modules was highlighted, explaining how to include modules at the top of a Python file using `import module_name`. 
+    - Importing allows the use of functions from the module without having to code them from scratch.
 
+- **Common Modules**: Two commonly used modules, `datetime` and `random`, were discussed in depth. 
+    - The `datetime` module is used for handling dates and times, while `random` allows the generation of random numbers and selections.
 
+- **Namespaces**: This concept ensures that module functions do not conflict with other variables or functions in the program. 
+  - A module’s namespace can be modified with an alias using `as`.
+
+- **Wildcard Importing**: The wildcard `*` allows importing all functions from a module, but it can lead to issues like namespace pollution.
+
+- **Decimal Arithmetic**: The `decimal` module provides more precise arithmetic than floating-point numbers, reducing rounding errors in calculations.
+- 
+#### Python functions mentioned in the workshops
+1. `from `name_module `import` name_object
+2. `datetime`
+3. `random`
+4. `pyplot`
+
+#### [Python Modules](https://docs.python.org/3/tutorial/modules.html)
+
+#### [W3Schools Modules](https://www.w3schools.com/python/python_modules.asp)
+
+#### More concepts in Week 8
+
+##### Manipulation of Strings
+##### datetime module
+```python
+from datetime import datetime
+
+time_now = datetime.now()
+print(time_now)
+```
+
+##### random module
+```python
+import random
+
+numbers = [0, 3, 6, 22]
+print(random.choice(numbers))
+print(random.randint(1, 10))
+```
+
+##### Namespaces module
+```python
+from matplotlib import pyplot as plt
+import random
+
+x = range(1, 11)
+y = random.sample(range(1000), 10)
+plt.plot(x, y)
+plt.show()
+![result](./Week8/1.png)
+```
