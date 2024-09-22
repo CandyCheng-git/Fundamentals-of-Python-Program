@@ -9,6 +9,7 @@
 4. [Week 4](#week-4)
 5. [Week 5](#week-5)
 6. [Week 7](#week-7)
+7. [Week 8](#week-8)
 
 ### Week 1
 #### Introduction to Programming
@@ -1192,4 +1193,4 @@ y = random.sample(range(1000), 10)
 plt.plot(x, y)
 plt.show()
 ```
-![result](./Week8/1.png)
+![result](./Week8/1.png) { width: 100px; }
