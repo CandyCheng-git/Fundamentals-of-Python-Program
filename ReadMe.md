@@ -1142,17 +1142,14 @@ print(txt.index("q"))  # Raises ValueError: substring not found
 #### Modules
 - **Module Importing**: The syntax for importing modules was highlighted, explaining how to include modules at the top of a Python file using `import module_name`. 
     - Importing allows the use of functions from the module without having to code them from scratch.
-
 - **Common Modules**: Two commonly used modules, `datetime` and `random`, were discussed in depth. 
     - The `datetime` module is used for handling dates and times, while `random` allows the generation of random numbers and selections.
-
 - **Namespaces**: This concept ensures that module functions do not conflict with other variables or functions in the program. 
   - A module’s namespace can be modified with an alias using `as`.
-
 - **Wildcard Importing**: The wildcard `*` allows importing all functions from a module, but it can lead to issues like namespace pollution.
-
 - **Decimal Arithmetic**: The `decimal` module provides more precise arithmetic than floating-point numbers, reducing rounding errors in calculations.
-- 
+
+
 #### Python functions mentioned in the workshops
 1. `from `my_name_of_module `import` my_name_of_object
 2. `import datetime`
@@ -1208,3 +1205,228 @@ total_cost = cost_one + cost_two
 # prints 0.30
 print(total_cost)
 ```
+
+
+
+## Week 9
+#### Python Dictionaries
+- **Basic Syntax**: A dictionary is created using curly braces `{}` and contains key-value pairs like `{'key': 'value'}`. 
+  - You can add, modify, or delete key-value pairs in a dictionary.
+- **Keys and Values**: Keys must be unique and immutable, while values can be of any data type. 
+  - An empty dictionary can be initialized with `{}`, and items can be added later using the `dictionary[key] = value` syntax.
+- **Operations**:
+  - **Add Multiple Keys**: Use `.update()` to add several key-value pairs at once.
+  - **Overwrite Values**: When the same key is assigned a new value, the old value is overwritten.
+  - **Dictionary Comprehensions**: You can use dictionary comprehensions to combine lists into a dictionary using the `zip()` function.
+- **Handling Missing Keys**: To avoid `KeyError`, use the `.get()` method, which safely returns `None` or a default value if the key does not exist. 
+  - Alternatively, you can use a `try-except` block for error handling when accessing keys.
+- **Iterating through a Dictionary**: You can retrieve keys, values, or both keys and values using the `.keys()`, `.values()`, and `.items()` methods, respectively. 
+  - These can be converted into lists using the `list()` constructor.
+- **Deleting Keys**: The `.pop()` method allows you to remove specific key-value pairs, while `.items()` provides both keys and values for iteration.
+
+
+#### Python functions mentioned in the workshops
+1. `.append()`
+2. `.extend()`
+3. `.insert()`
+4. `.remove()`
+5. `.pop()`
+6. `.clear()`
+7. `.index()`
+8. `.count()`
+9. `.sort()`
+10. `.reverse()`
+11. `.copy()`
+12. `from collections import deque`
+13. `from math import pi`
+14. `dictionary[key] = value`
+15. `.update()`
+16. `zip()`
+17. `.get()`
+18. `.keys()`
+19. `.values()`
+20. `.items()`
+
+
+
+#### [Python Dictionaries](https://docs.python.org/3/tutorial/datastructures.html)
+
+#### [W3Schools Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
+
+#### More concepts in Week 8
+
+##### Manipulation of Strings
+##### Dictionaries Keys
+`dictionary[key] = value`
+```python
+dictionary = {}
+dictionary['Japan'] = 10
+```
+```python
+dictionary = {'Japan': 10}
+dictionary.update({'Australia': 10, 'Japan': 9, 'France': 8})
+print(dictionary)
+# {'Japan': 9, 'Australia': 10, 'France': 8}
+# Note: notice how Japan is now 9 instead of 10 or 10 and 9?
+```
+
+###### Dictionary Comprehensions
+```python
+students = ['Jing', 'Jim', 'Kerrie', 'Rakesh']
+grades = [35, 50, 65, 85]
+gradebook = {key:value for key, value in zip(students, grades)}
+print(gradebook)
+# {'Jing': 35, 'Jim': 50, 'Kerrie': 65, 'Rakesh': 85}
+```
+
+
+###### Get an Invalid Key
+```python
+gradebook = {
+    'Jing': 35,
+    'Jim': 50,
+    'Kerrie': 65,
+    'Rakesh': 85
+}
+if 'Jane' in gradebook:
+    print(gradebook['Jane'])
+```
+
+
+###### Try/Except to Get a Key
+```python
+check_key = 'Jane'
+try:
+    print(gradebook['Jane'])
+except KeyError:
+    print('gradebook[\'Jane\'] does not exist')
+```
+###### Safely Get a Key
+```python
+print(gradebook.get('Jane'))
+# prints None
+```
+```python
+print(gradebook.get('Jane', 70))
+# prints 70
+# BUT IT DOES NOT ADD IT TO gradebook
+```
+
+###### Delete a Key
+```python
+gradebook = {
+    'Jing': 35,
+    'Jim': 50,
+    'Kerrie': 65,
+    'Rakesh': 85
+}
+
+gradebook.pop('Jing')
+print(gradebook)
+# {'Jim': 50, 'Kerrie': 65, 'Rakesh': 85}
+gradebook.pop('Jane')
+# KeyError: 'Jane'
+```
+
+
+
+###### Get all Keys
+```python
+gradebook = {
+    'Jing': 35,
+    'Jim': 50,
+    'Kerrie': 65,
+    'Rakesh': 85
+}
+print(gradebook.keys())
+# dict_keys(['Jing', 'Jim', 'Kerrie', 'Rakesh'])
+```
+
+
+
+###### Iterate through all the Keys
+```python
+gradebook = {
+    'Jing': 35,
+    'Jim': 50,
+    'Kerrie': 65,
+    'Rakesh': 85
+}
+for student in gradebook.keys():
+    print(student)
+"""
+Jing
+Jim
+Kerrie
+Rakesh
+"""
+```
+
+
+##### Get all Values
+```python
+gradebook = {
+    'Jing': 35,
+    'Jim': 50,
+    'Kerrie': 65,
+    'Rakesh': 85
+}
+for student in gradebook.values():
+    print(student)
+"""
+35
+50
+65
+85
+"""
+```
+
+```python
+gradebook = {
+    'Jing': 35,
+    'Jim': 50,
+    'Kerrie': 65,
+    'Rakesh': 85
+}
+grades = list(gradebook.values())
+print(grades)
+# [35, 50, 65, 85]
+```
+
+
+
+##### Get all Items
+```python
+gradebook = {
+    'Jing': 35,
+    'Jim': 50,
+    'Kerrie': 65,
+    'Rakesh': 85
+}
+for student, grade in gradebook.items():
+    print('Student: ' + student + ' received: ' + str(grade))
+"""
+Student: Jing received: 35
+Student: Jim received: 50
+Student: Kerrie received: 65
+Student: Rakesh received: 85
+"""
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
