@@ -8,10 +8,13 @@
 3. [Week 3](#week-3)
 4. [Week 4](#week-4)
 5. [Week 5](#week-5)
+6. Week 6 - Study week
 6. [Week 7](#week-7)
 7. [Week 8](#week-8)
 8. [Week 9](#week-9)
 9. [Week 10](#week-10)
+10. [Week 11](#week-11)
+11. Week 12 - Study week
 
 ### Week 1
 #### Introduction to Programming
@@ -1240,6 +1243,7 @@ print(total_cost)
 12. `from collections import deque`
 13. `from math import pi`
 14. `dictionary[key] = value`
+15. `try``except KeyError:`
 15. `.update()`
 16. `zip()`
 17. `.get()`
@@ -1253,7 +1257,7 @@ print(total_cost)
 
 #### [W3Schools Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
 
-#### More concepts in Week 8
+#### More concepts in Week 9
 ##### Dictionaries Keys
 `dictionary[key] = value`
 ```python
@@ -1435,7 +1439,7 @@ Student: Rakesh received: 85
 
 
 
-#### More concepts in Week 8
+#### More concepts in Week 10
 ##### Reading a File
 ```python
 with open('file_to_test.txt') as file:
@@ -1565,5 +1569,134 @@ for word, count in word_counts.items():
 ```
 
 
+## Week 11
+#### File Handling
+- **Class Definition**: A class is a blueprint for creating objects (instances). 
+  - It is defined using the `class` keyword, and the `pass` statement is used to define an empty class without causing errors.
+- **Instantiation**: A class must be instantiated to create an object, which is an instance of the class. 
+  - Without instantiation, a class is just a definition without functionality.
+- **Object-Oriented Programming (OOP)**: Classes are fundamental to OOP, where objects are instances of classes that encapsulate both data and functions (methods) relevant to that data.
+- **Class Variables**: These are variables shared across all instances of a class. 
+  - Each object created from the class can access and modify class variables.
+- **Methods in a Class**: Methods are functions defined within a class. 
+  - The first parameter of a method is always the object that calls it, which is typically referred to as `self`.
+- **Constructors and Instance Variables**: The `__init__()` method is a special constructor method that is automatically called when a class is instantiated. 
+  - It allows you to pass parameters and assign them to instance variables (e.g., `self.name`, `self.job`).
+- **Instance Variables**: These are variables specific to each object. 
+  - Unlike class variables, instance variables store unique data for each object.
+- **Modifying Attributes**: Methods like `get_age()` and `update_age()` demonstrate how instance variables can be accessed and modified through class methods.
 
+
+#### Python functions mentioned in the workshops
+1. `import os`
+2. `import sys`
+3. `try``except KeyError:``else`
+4. `with` function`():`
+5. `try``finaly`
+6. `class` NameOfClass`:`
+
+
+#### [PEP 8 Style Guide](https://peps.python.org/pep-0008/)
+
+#### More concepts in Week 11
+##### Class
+```python
+class Test:
+    pass
+
+print(type(Test()))
+# <class '__main__.Test'>
+```
+
+##### Instantiation
+```python
+class Person:
+    pass
+
+bob = Person()
+# A variable bob instantiated an empty Person() class constructor
+```
+
+##### Object-Oriented Programming (OOP)
+`<class '__main__.Test’>`
+
+
+##### Class Variables
+```python
+class Person:
+    job = 'Cook'
+
+bob = Person()
+print(bob.job)
+# prints Cook
+```
+
+##### Methods in a Class
+```python
+class Person:
+    job = 'Cook'
+    years = 15
+
+    def work_experience(self):
+        print('Experience: ' + str(self.years))
+
+bob = Person()
+print(bob.work_experience())
+# prints Experience: 15
+```
+
+
+##### Methods with Arguments (in a Class)
+```python
+class WeightConvert:
+    kg_in_pounds = 2.205
+
+    def how_many_pounds(self, kg):
+        return kg * self.kg_in_pounds
+
+convert = WeightConvert()
+print(convert.how_many_pounds(100))
+# prints 220.5
+```
+
+##### Constructors
+```python
+class Person:
+    def __init__(self, name, job):
+        self.name = name
+        self.job = job
+
+bob = Person('Bob', 'Cook')
+ana = Person('Ana', 'Nurse')
+
+print(ana.name) # prints Ana
+print(ana.job) # prints Nurse
+```
+
+
+##### Instance Variables
+```python
+print(ana.__dict__)
+# {'name': 'Ana', 'job': 'Nurse'}
+```
+
+
+##### Final example
+```python
+class Person:
+    def __init__(self, name, age, is_working, experience):
+        self.name = name
+        self.age = age
+        self.is_working = is_working
+        self.experience = experience
+
+    def get_age(self):
+        return self.age
+
+    def update_age(self, age):
+        self.age = age
+
+max = Person('Max', 30, True, 5)
+max.update_age(31)
+```
 
