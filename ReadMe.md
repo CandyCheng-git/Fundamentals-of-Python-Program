@@ -10,6 +10,8 @@
 5. [Week 5](#week-5)
 6. [Week 7](#week-7)
 7. [Week 8](#week-8)
+8. [Week 9](#week-9)
+9. [Week 10](#week-10)
 
 ### Week 1
 #### Introduction to Programming
@@ -1163,8 +1165,6 @@ print(txt.index("q"))  # Raises ValueError: substring not found
 #### [W3Schools Modules](https://www.w3schools.com/python/python_modules.asp)
 
 #### More concepts in Week 8
-
-##### Manipulation of Strings
 ##### datetime module
 ```python
 from datetime import datetime
@@ -1254,8 +1254,6 @@ print(total_cost)
 #### [W3Schools Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
 
 #### More concepts in Week 8
-
-##### Manipulation of Strings
 ##### Dictionaries Keys
 `dictionary[key] = value`
 ```python
@@ -1414,18 +1412,157 @@ Student: Rakesh received: 85
 ```
 
 
+## Week 10
+#### File Handling
+- **Basic File Handling**: Files are opened using the `open()` function, which requires specifying the file path and mode (`'r'` for reading, `'w'` for writing, etc.). 
+  - The `with` statement is recommended for handling file streams to ensure files are properly closed after operations.
+- **File Reading**:
+  - `.read()`: Reads the entire file as a single string.
+  - `.readlines()`: Reads the file line by line and returns a list where each element is a line from the file.
+- **File Writing**: To write to a file, use `'w'` mode. This overwrites the existing content, while `'a'` mode appends new data without deleting the current content.
+- **CSV Files**:
+    - CSV (Comma Separated Values) files are structured text files, often used for handling spreadsheet-like data. 
+      - Python’s `csv` library simplifies reading from and writing to CSV files.
+- **JSON Files**:
+    - JSON (JavaScript Object Notation) is another common format for structured data. 
+      - The `json` library allows reading from and writing to JSON files, making it easy to work with structured data objects like dictionaries and lists.
+- **Append Mode**: When using `'a'` mode, new data is added to the end of the file without removing existing content.
+
+#### Python functions mentioned in the workshops
+1. `.open()`
+2. `import csv`
+3. `import json`
 
 
 
+#### More concepts in Week 8
+##### Reading a File
+```python
+with open('file_to_test.txt') as file:
+    data = file.read()
+
+print(data)
+# Load this file into your Python program
+```
 
 
+###### Iterating Through Lines
+```python
+with open('students.txt') as file:
+    for line in file.readlines():
+        print(line)
+"""
+Jing
+
+Jim
+
+Kerrie
+
+Rakesh
+
+"""
+```
 
 
+##### Writing a File
+```python
+with open('file.txt', 'w') as file:
+    file.write('Testing if data added to file')
+```
+
+###### Append to a File
+```python
+with open('file.txt', 'a') as file:
+    file.write('Append mode\n')
+    # \n used to add new line
+```
 
 
+##### Writing a File
+```python
+with open('file.txt', 'w') as file:
+    file.write('Testing if data added to file')
+```
 
+##### Comma Separated Value (CSV) File
+`*.csv`
+###### Reading a CSV File
+```python
+import csv
 
+gradebook = {}
+with open('gradebook.csv', newline='') as file:
+    data = csv.DictReader(file)
+    for row in data:
+        gradebook[row['student']] = row['grade']
+```
 
+```python
+import csv
+
+with open('gradebook_headers_removed.csv') as file:
+    reader = csv.reader(file)
+    gradebook = dict(reader)
+```
+###### Writing a CSV File
+```python
+import csv
+
+gradebook = {'Jing': '35', 'Jim': '50', 'Kerrie': '65', 'Rakesh': '85'}
+with open('output.csv', 'w', newline='') as file:
+  writer = csv.writer(file)
+  for key, value in gradebook.items():
+    writer.writerow([key, value])
+```
+
+##### JavaScript Object Notation (JSON)File
+`*.json`
+###### Reading a JSON File
+```python
+import json
+
+with open('purchase.json') as file:
+    data = json.load(file)
+
+print(data)
+# {'user': 'James', 'action': 'Buy', 'item_id': 78192, 'price': 39.99}
+```
+###### Writing a JSON File
+```python
+import json
+
+convert_to_JSON = {
+    'number': 123,
+    'float': 1.32,
+    'bool': True,
+    'NoneType': None,
+    'String': 'String',
+    'datetime': '2022-12-27 08:26:49.219717'
+}
+
+with open('output.json', 'w') as file:
+    json.dump(convert_to_JSON, file)
+```
+
+##### Final example
+```python
+def count_words(file_path):
+    word_counts = {}
+    with open(file_path, 'r') as f:
+        for line in f:
+            words = line.split()
+            for word in words:
+                if word in word_counts:
+                    word_counts[word] += 1
+                else:
+                    word_counts[word] = 1
+    return word_counts
+
+file_path = 'example.txt'
+word_counts = count_words(file_path)
+for word, count in word_counts.items():
+    print(word, count)
+```
 
 
 
